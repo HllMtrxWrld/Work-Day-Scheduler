@@ -1,28 +1,18 @@
 var currentDay = $('#currentDay');
 var saveButton = $('.saveBtn');
-// var task9 = $('.t9');
-// var task10 = $('.t10');
-// var task11 = $('.t11');
-// var task12 = $('.t12');
-// var task1 = $('.t1');
-// var task2 = $('.t2');
-// var task3 = $('.t3');
-// var task4 = $('.t4');
-// var task5 = $('.t5');
+var task9 = $('.t9');
+var task10 = $('.t10');
+var task11 = $('.t11');
+var task12 = $('.t12');
+var task1 = $('.t1');
+var task2 = $('.t2');
+var task3 = $('.t3');
+var task4 = $('.t4');
+var task5 = $('.t5');
 
-// var taksArray = [
-// task9,
-// task10,
-// task11,
-// task12,
-// task1,
-// task2,
-// task3,
-// task4,
-// task5
-// ];
 
-//  function to display current time
+
+// The function to display current time.
 function displayTime() {
     var rightNow = moment().format('DD MMM YYYY [at] hh:mm:ss a');
     currentDay.text(rightNow);
@@ -30,68 +20,55 @@ function displayTime() {
   setInterval(displayTime, 1000);
   
   
-// function to save a task i local storage
+// The function to save tasks in the local storage.
 
 saveButton.on('click', function () {
   
-  var task9 = $('.t9').val();
-  localStorage.setItem('task9', task9);
+  localStorage.setItem('task9', task9.val());
   
-  var task10 = $('.t10').val();
-  localStorage.setItem('task10', task10);
+  localStorage.setItem('task10', task10.val());
   
-  var task11 = $('.t11').val();
-  localStorage.setItem('task11', task11);
+  localStorage.setItem('task11', task11.val());
 
-  var task12 = $('.t12').val();
-  localStorage.setItem('task12', task12);
+  localStorage.setItem('task12', task12.val());
 
-  var task13 = $('.t1').val();
-  localStorage.setItem('task13', task13);
+  localStorage.setItem('task1', task1.val());
 
-  var task14 = $('.t2').val();
-  localStorage.setItem('task14', task14);
+  localStorage.setItem('task2', task2.val());
 
-  var task15 = $('.t3').val();
-  localStorage.setItem('task15', task15);
+  localStorage.setItem('task3', task3.val());
 
-  var task16 = $('.t4').val();
-  localStorage.setItem('task16', task16);
+  localStorage.setItem('task4', task4.val());
 
-  var hr17 = $('.t5').val();
-  localStorage.setItem('text17', hr17);
+  localStorage.setItem('task5', task5.val());
   
  });
 
+// This code gets tasks from the local storage.
 
-// function inputTask() {
-//   taksArray.forEach(element => {
-    
-//   });
-// }
+ var task9Saved = localStorage.getItem('task9');
+ task9.val(task9Saved);
 
+ var task10Saved = localStorage.getItem('task10');
+ task10.val(task10Saved);
 
+ var task11Saved = localStorage.getItem('task11');
+ task11.val(task11Saved);
 
-// function to save a task(button)
-// $('.saveBtn').click(function () {
-// var hr9 = $('.t9').val();
-// localStorage.setItem('text9', hr9);
+ var task12Saved = localStorage.getItem('task12');
+ task12.val(task12Saved);
 
-// var hr10 = $('.t10').val();
-// localStorage.setItem('text10', hr10);
+ var task1Saved = localStorage.getItem('task1');
+ task1.val(task1Saved);
 
-// var hr11 = $('.t11').val();
-// localStorage.setItem('text11', hr11);
-// var hr12 = $('.t12').val();
-// localStorage.setItem('text12', hr12);
-// var hr13 = $('.t1').val();
-// localStorage.setItem('text13', hr13);
-// var hr14 = $('.t2').val();
-// localStorage.setItem('text14', hr14);
-// var hr15 = $('.t3').val();
-// localStorage.setItem('text15', hr15);
-// var hr16 = $('.t4').val();
-// localStorage.setItem('text16', hr16);
-// var hr17 = $('.t5').val();
-// localStorage.setItem('text17', hr17);
-// });
+ var task2Saved = localStorage.getItem('task2');
+ task2.val(task2Saved);
+
+ var task3Saved = localStorage.getItem('task3');
+ task3.val(task3Saved);
+
+ var task4Saved = localStorage.getItem('task4');
+ task4.val(task4Saved);
+
+ var task5Saved = localStorage.getItem('task5');
+ task5.val(task5Saved);
