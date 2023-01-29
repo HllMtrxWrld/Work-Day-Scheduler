@@ -75,9 +75,15 @@ textarea {
   background-color: #06aed5;
   color: white;
   width: 10%;
+  display: grid;
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.saveImg {
+  width: 40%;
+  margin: auto;
 }
