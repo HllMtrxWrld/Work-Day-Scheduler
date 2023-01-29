@@ -12,6 +12,7 @@ var task5 = $('.t5');
 
 
 
+
 // The function to display current time.
 function displayTime() {
     var rightNow = moment().format('DD MMM YYYY [at] hh:mm:ss a');
@@ -72,3 +73,20 @@ saveButton.on('click', function () {
 
  var task5Saved = localStorage.getItem('task5');
  task5.val(task5Saved);
+
+
+//  This code add styles for past, present and future tasks
+
+var currentTime = moment().hour();
+
+for (let i = 9; i < 18; i++) {
+  if (currentTime > i) {
+    $('.' + i).addClass('past');
+  } else if (currentTime === i) {
+    $('.' + i).addClass('present');
+  } else {
+    $('.' + i).addClass('future');
+  };
+
+};
+
