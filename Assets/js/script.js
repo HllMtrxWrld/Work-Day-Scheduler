@@ -90,3 +90,8 @@ for (let i = 9; i < 18; i++) {
 
 };
 
+// This code calears the local storage at 9 PM
+
+if (currentTime === 21) {
+  localStorage.clear();
+}
